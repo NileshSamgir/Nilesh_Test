@@ -10,7 +10,6 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            abcd_test_failure
             Console.WriteLine("Welcome to Jenkins");
             Console.ReadLine();
         }
