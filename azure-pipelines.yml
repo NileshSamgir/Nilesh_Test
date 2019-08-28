@@ -31,3 +31,16 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+- task: SonarQubePrepare@4
+  inputs:
+      SonarQube: 'SonarQube.Net'
+      scannerMode: 'MSBuild'
+      projectKey: '.NetApp'
+      projectName: '.NetApp'
+
+- task: SonarQubeAnalyze@4
+
+- task: SonarQubePublish@4
+  inputs:
+    pollingTimeoutSec: '300'
